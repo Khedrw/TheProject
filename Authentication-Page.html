@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="tabs">
+            <button class="tab-button active" id="loginTab">login</button>
+            <button class="tab-button" id="registerTab">register</button>
+        </div>
+
+        <div class="form-container">
+            <form id="loginForm" class="active">
+                <div>
+                    <label for="loginEmail">email</label>
+                    <input type="email" id="loginEmail" placeholder="enter your email" required>
+                </div>
+                <div>
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="enter your password" required>
+                </div>
+                <button type="submit">login</button>
+            </form>
+
+            <form id="registerForm">
+                <div>
+                    <label for="register">email</label>
+                    <input type="email" id="registerEmail" placeholder="enter your email" required>
+                </div>
+                <div>
+                    <label for="registerPassword">password</label>
+                    <input type="password" id="registerPassword" placeholder="enter your password" required>
+                </div>
+                <div>
+                    <label for="registerConfirmPassword">confirm password</label>
+                    <input type="password" id="registerConfirmPassword" placeholder="re-enter password" required>
+                </div>
+                <button type="submit">register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./logic.js"></script>
+</body>
+</html>
