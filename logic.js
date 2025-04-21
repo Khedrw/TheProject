@@ -89,10 +89,17 @@ function handleLogin() {
             return;
         }
 
+        // Save the user data as the active user
         localStorage.setItem('activeUser', JSON.stringify(foundUser));
         alert('You have successfully logged in!');
         loginForm.reset();
-        window.location.href = 'home.html'; // Redirect after successful login
+
+        // Redirect based on whether the user is admin or not
+        if (foundUser.email === "admin@quiz.com" && foundUser.password === "admin123") {
+            window.location.href = 'dashboard.html'; // Admin Dashboard
+        } else {
+            window.location.href = 'home.html'; // Regular User Home
+        }
     });
 }
 
