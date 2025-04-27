@@ -1,0 +1,291 @@
+/* =======================
+    RESET & BASE STYLES
+   ======================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* =======================
+            CSS VARIABLES
+         ======================= */
+:root {
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --bg: #f2f2f2;
+    --bg-light: #fff;
+    --text: #333;
+    --danger: #c00;
+    --radius: 5px;
+    --transition: 0.3s ease;
+    --font-family: 'Arial', sans-serif;
+    --container-padding: 20px;
+    --max-width: 800px;
+}
+
+/* =======================
+           UTILITY CLASSES
+         ======================= */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: var(--container-padding);
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =======================
+           FORM & BUTTON STYLES
+         ======================= */
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"],
+button {
+    font-size: 1rem;
+    border-radius: var(--radius);
+}
+
+input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+button {
+    padding: 0.75rem;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+button:hover,
+button:focus {
+    background: var(--primary-dark);
+}
+
+/* =======================
+           AUTHENTICATION PAGE
+         ======================= */
+body.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg);
+}
+
+.auth-container {
+    width: 360px;
+    overflow: hidden;
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    background: var(--primary);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.tab-button:hover,
+.tab-button:focus {
+    background: var(--primary-dark);
+}
+
+.tab-button.active {
+    background: var(--primary-dark);
+}
+
+.form-container {
+    padding: var(--container-padding);
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form.active {
+    display: flex;
+}
+
+.error-message {
+    color: var(--danger);
+    min-height: 1.5em;
+    margin-bottom: 1rem;
+}
+
+/* =======================
+           TOP NAVIGATION BAR
+         ======================= */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: #fff;
+}
+
+.top-nav button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* =======================
+           HOME PAGE
+         ======================= */
+body.home-page {
+    background: var(--bg);
+}
+
+.home-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.quiz-list .quiz-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.quiz-list .quiz-item:hover,
+.quiz-list .quiz-item:focus {
+    background: #f9f9f9;
+}
+
+/* =======================
+           QUIZ PAGE
+         ======================= */
+body.quiz-page {
+    background: var(--bg);
+}
+
+.quiz-container {
+    margin-top: 2rem;
+    padding: var(--container-padding);
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question {
+    margin-bottom: 1.5rem;
+}
+
+.question p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: var(--primary);
+}
+
+/* =======================
+           RESULT DISPLAY
+         ======================= */
+.result {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =======================
+           DASHBOARD PAGE
+         ======================= */
+body.dashboard-page {
+    background: var(--bg);
+}
+
+.dashboard-container {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #2c3e50;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}

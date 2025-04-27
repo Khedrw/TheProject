@@ -3,22 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quiz</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <div class="quiz-container">
+<body class="quiz-page">
+    <header class="top-nav">
+        <button id="backBtn">&larr; Back</button>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main class="quiz-container">
         <h1 id="quizTitle"></h1>
         <form id="quizForm">
-            <div id="quizQuestions"></div>
-            <button type="submit">Submit Quiz</button>
+            <div id="questions"></div>
+            <div class="error-message" id="quizError"></div>
+            <button type="submit">Submit</button>
         </form>
-        <div id="quizResult"></div>
-    </div>
+        <div id="quizResult" class="result"></div>
+    </main>
 
-    <script src="./logic.js"></script>
+    <script type="module" src="./js/quiz.js"></script>
 </body>
 
 </html>

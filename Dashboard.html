@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <div>
-        <h1>Dashboard</h1>
-        <div id="usersList" class="Dashboard"></div>
-    </div>
 
-    <script src="./Dashboard.js"></script>
+<body class="dashboard-page">
+    <header class="top-nav">
+        <h1>Admin Dashboard</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <table id="usersTable">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Scores</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+    <script type="module" src="./js/dashboard.js"></script>
 </body>
+
 </html>

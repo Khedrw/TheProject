@@ -3,22 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <div class="home-container">
-        <h1> Welcome <span id="userName"></span>!</h1>
-        <!-- Test list -->
-        <div class="quiz-list">
-            <h2> TEST LIST </h2>
-            <div id="listOfQuizzes"></div>
-        </div>
-    </div>
+<body class="home-page">
+    <header class="top-nav">
+        <span id="userName"></span>
+        <button id="logoutBtn">Logout</button>
+    </header>
 
-    <script src="./logic.js"></script>
+    <main class="home-container">
+        <h1>Available Quizzes</h1>
+        <div id="quizList" class="quiz-list"></div>
+    </main>
+
+    <script type="module" src="./js/home.js"></script>
 </body>
 
 </html>
