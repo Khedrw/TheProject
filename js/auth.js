@@ -4,18 +4,16 @@ import {
 } from './storage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('auth.js loaded, setting up tabs');  // <-- تحقق من ظهور هذه الرسالة
+    console.log('auth.js loaded, setting up tabs');  
 
     document.querySelectorAll('.tab-button').forEach(btn => {
         btn.addEventListener('click', () => {
-            const target = btn.dataset.target;            // "login" أو "register"
-            console.log('tab clicked:', target);         // <-- تحقق من ظهور هذه الرسالة عند النقر
+            const target = btn.dataset.target;            
+            console.log('tab clicked:', target);         
 
-            // ازل active من كل الأزرار والنماذج
             document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
             document.querySelectorAll('.form').forEach(f => f.classList.remove('active'));
 
-            // أضف active للزر والنموذج المناسب
             btn.classList.add('active');
             document.getElementById(`${target}Form`).classList.add('active');
         });

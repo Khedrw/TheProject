@@ -39,7 +39,7 @@ body {
 }
 
 /* =======================
-           UTILITY CLASSES
+            UTILITY CLASSES
          ======================= */
 .container {
     width: 90%;
@@ -56,7 +56,7 @@ body {
 }
 
 /* =======================
-           FORM & BUTTON STYLES
+            FORM & BUTTON STYLES
          ======================= */
 .form-group {
     margin-bottom: 1rem;
@@ -103,7 +103,7 @@ button:focus {
 }
 
 /* =======================
-           AUTHENTICATION PAGE
+            AUTHENTICATION PAGE
          ======================= */
 body.auth-page {
     display: flex;
@@ -165,7 +165,7 @@ body.auth-page {
 }
 
 /* =======================
-           TOP NAVIGATION BAR
+            TOP NAVIGATION BAR
          ======================= */
 .top-nav {
     display: flex;
@@ -184,7 +184,7 @@ body.auth-page {
 }
 
 /* =======================
-           HOME PAGE
+            HOME PAGE
          ======================= */
 body.home-page {
     background: var(--bg);
@@ -210,7 +210,7 @@ body.home-page {
 }
 
 /* =======================
-           QUIZ PAGE
+            QUIZ PAGE
          ======================= */
 body.quiz-page {
     background: var(--bg);
@@ -248,7 +248,7 @@ input[type="radio"] {
 }
 
 /* =======================
-           RESULT DISPLAY
+            RESULT DISPLAY
          ======================= */
 .result {
     margin-top: 1.5rem;
@@ -258,7 +258,7 @@ input[type="radio"] {
 }
 
 /* =======================
-           DASHBOARD PAGE
+            DASHBOARD PAGE
          ======================= */
 body.dashboard-page {
     background: var(--bg);
